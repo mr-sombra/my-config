@@ -1,12 +1,14 @@
 format = """
 [](#3B4252)\
-$python\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
 [](fg:#434C5E bg:#4C566A)\
 $git_branch\
 $git_status\
+[](fg:#4C566A bg:#b4befe)\
+$python\
+[](fg:#b4befe bg:#4C566A)\
 [](fg:#4C566A bg:#86BBD8)\
 $c\
 $elixir\
@@ -108,8 +110,10 @@ style = "bg:#86BBD8"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
-style = "bg:#3B4252"
-format = '[(\($virtualenv\) )]($style)'
+symbol = " "
+style = "fg:#1e1e2e	 bg:#b4befe"
+version_format = "${major}.${minor}"
+format = '[ $symbol$virtualenv ($version) ]($style)'
 
 [rust]
 symbol = ""
