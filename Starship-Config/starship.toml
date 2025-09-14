@@ -8,6 +8,7 @@ palette = "catppuccin_mocha"
 format = """ 
 [](base)\
 $os\
+$shell\
 $username\
 $python\
 [](bg:lavender fg:base)\
@@ -31,6 +32,13 @@ command_timeout = 400
 
 # Disable the blank line at the start of the prompt
 add_newline = false
+
+[shell]
+format = "[$indicator ]($style)"
+style = "bg:base fg:text"
+bash_indicator = ""
+pwsh_indicator = ""
+disabled = false
 
 [os]
 format = "[$symbol ]($style)"
